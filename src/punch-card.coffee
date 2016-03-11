@@ -45,7 +45,7 @@ punchCardTemplate = """
 """
 
 
-angular.module("punchCard").directive "punchCard" , ($compile) ->
+angular.module("punchCard").directive "punchCard" , ['$compile', ($compile) ->
     restrict: "AE"
 
     scope:
@@ -78,4 +78,4 @@ angular.module("punchCard").directive "punchCard" , ($compile) ->
 
             element.empty()
             element.append $compile(punchCardTemplate)($scope)
-
+]
